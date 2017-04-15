@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} -S [OR]
+	RewriteCond %{REQUEST_FILENAME} -l [OR]
+	RewriteCond %{REQUEST_FILENAME} -d [OR]
+	RewriteRule ˆ.*$ - [NC,l]
+	RewriteRule ˆ.*$ index.php [NC,L]
+</IfModule>
